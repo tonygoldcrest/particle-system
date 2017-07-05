@@ -1,0 +1,7 @@
+node_modules
+.tmp
+bower_components
+dist
+test/bower_components
+
+.DS_Store

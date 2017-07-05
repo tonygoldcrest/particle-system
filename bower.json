@@ -1,0 +1,13 @@
+{
+  "name": "particle-system",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "stats.js": "*",
+    "dat.gui": "*"
+  },
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2"
+  }
+}
