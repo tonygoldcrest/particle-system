@@ -12,6 +12,8 @@ var mousedown = false;
 var mouseposition;
 var isActiveTab = true;
 
+var paused = false;
+
 
 class Vector2 {
   constructor(x, y) {
@@ -173,6 +175,13 @@ function init() {
       });
     } else if (evt.key == 'l') {
       $('#legend').toggle();
+    } else if (evt.key == 'p') {
+      if (paused) {
+        startTime = Date.now();
+        paused = false;
+        animate();
+      } else
+        paused = true;
     }
   });
 
@@ -261,11 +270,11 @@ function animate() {
 
   stats.end();
   startTime = Date.now();
-  if (isActiveTab)
-    requestAnimationFrame(animate);
-  else {
-    setTimeout(animate, 16);
-  }
+  if (!paused)
+    if (isActiveTab)
+      requestAnimationFrame(animate);
+    else 
+      setTimeout(animate, 16);
 }
 
 function getRandomNumber(min, max) {
