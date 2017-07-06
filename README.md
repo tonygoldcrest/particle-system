@@ -1,6 +1,8 @@
 # Particle System
 
-![Alt text](/app/images/screenshot1.png?raw=true "Optional Title")
+Here is a [SHOWCASE](http://particles.toshegg.ru)
+
+![particle system](/app/images/screenshot1.png?raw=true)
 
 ## Run project
 
